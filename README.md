@@ -9,7 +9,7 @@ First you need to download sources on your computer and then do next (virtualenv
 
     $ virtualenv /your/virtual/
     $ source /your/virtual/env/bin/activate
-    $ (env) python setup.py install
+    $ (env) pip install -q requirements.txt
     
 After that you will be able to start local flask server with command:
 
