@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h2>Lea FS</h2>
+
+    <ol class="breadcrumb">
+        <li>Path:</li>
+        <li>{{ current_path }}</li>
+    </ol>
+
+    <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        <button type="button" class="btn btn-default btn-small" id="add-file-btn"><i
+                class="glyphicon glyphicon-file"></i>
+            Add File
+        </button>
+        <button type="button" class="btn btn-default btn-small" id="add-folder-btn"><i
+                class="glyphicon glyphicon-folder-close"></i>
+            Add Folder
+        </button>
+    </div>
+
+    <table class="table table-striped table-hover" id="metadata">
+    {% for key, value in metadata.items() %}
+        <tr>
+            <td class="align-right"><strong>{{ key }}</strong></td>
+            <td>{{ value }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}
